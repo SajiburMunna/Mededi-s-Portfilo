@@ -31,7 +31,7 @@ function Hola() {
         </div>
 
         <div
-          className="absolute bottom-0 right-0 z-0"
+          className="hidden md:block absolute bottom-0 right-0 z-0"
           style={{
             objectFit: "cover",
             objectPosition: "right bottom",
@@ -55,7 +55,7 @@ function Hola() {
         </div>
 
         <div className="flex justify-center items-center min-h-screen">
-          <h1 className="font-League text-[180px]  font-bold leading-[166px] text-white tracking-[0.3em]">
+          <h1 className="font-League text-[100px]  sm:text-[140px] md:text-[180px]  font-bold leading-[166px] text-white tracking-[0.3em]">
             HOLA
           </h1>
         </div>

@@ -1,8 +1,20 @@
 import Link from "next/link";
+import { useState } from "react";
 
 import Logo from "@/assets/icon/Logo";
+import Popup from "./Popup";
 
 const Navbar = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const routes = [
+    { id: 1, name: "Portfolio" },
+    { id: 2, name: "Resume" },
+  ];
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
   return (
     <nav className="flex items-center justify-between flex-wrap pt-5 px-5">
       <div className="relative flex items-center flex-shrink-0 text-white mr-6">
@@ -27,19 +39,29 @@ const Navbar = () => {
           <Logo />
         </Link>
       </div>
-      <div className="block md:hidden">
-        <button className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
-          <svg
-            className="h-3 w-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
+      <div onClick={togglePopup} className="block md:hidden cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="12"
+          viewBox="0 0 18 12"
+          fill="none"
+        >
+          <path
+            d="M6 2C7.65685 2 8 1.55228 8 1C8 0.447716 7.65685 7.15256e-07 6 7.15256e-07L2 0C0.343145 0 5.96046e-08 0.447715 0 1C0 1.55228 0.343145 2 2 2L6 2Z"
+            fill="white"
+          />
+          <path
+            d="M10 7C11.6569 7 12 6.55228 12 6C12 5.44772 11.6569 5 10 5H2C0.343145 5 5.96046e-08 5.44771 0 6C0 6.55228 0.343145 7 2 7H10Z"
+            fill="white"
+          />
+          <path
+            d="M18 11C18 11.5523 17.6569 12 16 12L2 12C0.343145 12 0 11.5523 0 11C5.96046e-08 10.4477 0.343145 10 2 10L16 10C17.6569 10 18 10.4477 18 11Z"
+            fill="white"
+          />
+        </svg>
       </div>
-      <div className="w-full block flex-grow md:flex md:items-center md:w-auto">
+      <div className="w-full hidden flex-grow md:flex md:items-center md:w-auto">
         <div className="text-sm md:flex-grow text-center">
           <Link href="/hola" legacyBehavior>
             <a className="font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4">
@@ -100,12 +122,13 @@ const Navbar = () => {
               </svg>
             </div>
 
-            <button className="bg-yellow-200  text-black py-2 px-4 rounded">
+            <button className="bg-[#FFC576] font-normal font-League text-black py-2 px-4 rounded">
               Let's Talk
             </button>
           </div>
         </div>
       </div>
+      <Popup show={showPopup} onClose={togglePopup} routes={routes} />
     </nav>
   );
 };
