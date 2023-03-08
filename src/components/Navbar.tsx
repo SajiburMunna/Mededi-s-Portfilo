@@ -4,13 +4,12 @@ import { useState } from "react";
 import Logo from "@/assets/icon/Logo";
 import Popup from "./Popup";
 
+const routes: { id: number; name: string }[] = [
+  { id: 1, name: "Portfolio" },
+  { id: 2, name: "Resume" },
+];
 const Navbar = () => {
   const [showPopup, setShowPopup] = useState(false);
-
-  const routes = [
-    { id: 1, name: "Portfolio" },
-    { id: 2, name: "Resume" },
-  ];
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
