@@ -65,7 +65,7 @@ const Navbar = () => {
           <a
             href="https://cutt.ly/g84tw3p"
             target="_blank"
-            className="font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4"
+            className="transition-all duration-700 font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-[#FFC576] mr-4"
           >
             Portfolio
           </a>
@@ -73,7 +73,7 @@ const Navbar = () => {
           <a
             href="https://cutt.ly/g84tw3p"
             target="_blank"
-            className="font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4"
+            className="transition-all duration-700 font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-[#FFC576] mr-4"
           >
             Resume
           </a>
@@ -127,7 +127,7 @@ const Navbar = () => {
             </div>
 
             <a href="mailto:holamehedi@gmail.com" target="_blank">
-              <button className="bg-[#FFC576] font-normal font-League text-black py-2 px-4 rounded">
+              <button className="bg-[#FFC576] transition-all duration-700 hover:bg-white font-normal font-League text-black py-2 px-4 rounded">
                 Let's Talk
               </button>
             </a>
