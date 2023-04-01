@@ -165,7 +165,7 @@ function InfoCard() {
             />
           </svg>
         </div>
-        <div className="absolute bottom-[10px] right-[100px]">
+        <div className="absolute bottom-[10px] right-[70px] md:right-[100px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="69"
