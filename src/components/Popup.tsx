@@ -7,7 +7,7 @@ interface Props {
 function Popup({ show, onClose, routes }: Props) {
   return (
     <div
-      className={`fixed top-0 left-0 w-full min-h-screen flex justify-center items-center   bg-black bg-opacity-70 ${
+      className={`fixed z-10 top-0 left-0 w-full min-h-screen flex justify-center items-center   bg-black bg-opacity-70 ${
         show ? "" : "hidden"
       }`}
     >

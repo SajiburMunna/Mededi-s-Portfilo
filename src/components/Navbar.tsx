@@ -4,9 +4,9 @@ import { useState } from "react";
 import Logo from "@/assets/icon/Logo";
 import Popup from "./Popup";
 
-const routes: { id: number; name: string }[] = [
-  { id: 1, name: "Portfolio" },
-  { id: 2, name: "Resume" },
+const routes: { id: number; name: string; link: string }[] = [
+  { id: 1, name: "Portfolio", link: "https://cutt.ly/g84tw3p" },
+  { id: 2, name: "Resume", link: "https://cutt.ly/g84tw3p" },
 ];
 const Navbar = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between flex-wrap pt-5 px-5">
       <div className="relative flex items-center flex-shrink-0 text-white mr-6">
-        <div className="h-6 w-6 absolute left-16 z-10 top-[150px]">
+        <div className="h-6 w-6 absolute left-16 z-10 top-[150px] hidden md:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="46"
@@ -62,16 +62,21 @@ const Navbar = () => {
       </div>
       <div className="w-full hidden flex-grow md:flex md:items-center md:w-auto">
         <div className="text-sm md:flex-grow text-center">
-          <Link href="/hola" legacyBehavior>
-            <a className="font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4">
-              Portfolio
-            </a>
-          </Link>
-          <Link href="/route2" legacyBehavior>
-            <a className="font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4">
-              Resume
-            </a>
-          </Link>
+          <a
+            href="https://cutt.ly/g84tw3p"
+            target="_blank"
+            className="font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4"
+          >
+            Portfolio
+          </a>
+
+          <a
+            href="https://cutt.ly/g84tw3p"
+            target="_blank"
+            className="font-League text-lg font-normal block md:inline-block md:mt-0 text-white hover:text-gray-400 mr-4"
+          >
+            Resume
+          </a>
         </div>
         <div>
           <div className="relative flex items-center">
@@ -121,9 +126,11 @@ const Navbar = () => {
               </svg>
             </div>
 
-            <button className="bg-[#FFC576] font-normal font-League text-black py-2 px-4 rounded">
-              Let's Talk
-            </button>
+            <a href="mailto:holamehedi@gmail.com" target="_blank">
+              <button className="bg-[#FFC576] font-normal font-League text-black py-2 px-4 rounded">
+                Let's Talk
+              </button>
+            </a>
           </div>
         </div>
       </div>

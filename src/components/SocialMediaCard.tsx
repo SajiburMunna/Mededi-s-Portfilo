@@ -7,17 +7,17 @@ const SocialInfo = [
   {
     name: "Facebook",
     icon: Facebook,
-    link: "facebook.com",
+    link: "https://www.facebook.com/holamehedi",
   },
   {
     name: "Instagram",
     icon: Instagram,
-    link: "instagram.com",
+    link: "https://www.instagram.com/holamehedi/",
   },
   {
     name: "LindedIn",
     icon: Linkdin,
-    link: "linkedin.com",
+    link: "https://www.linkedin.com/in/holamehedi/",
   },
 ];
 
